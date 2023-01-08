@@ -1,0 +1,73 @@
+
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test",
+  "username": "test",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+### VIDEOS
+
+GET http://localhost:4000/video
+
+###
+
+GET http://localhost:4000/video/user
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjhlYjZjNjY2NWU4ZjMzN2JkY2JlMCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTY3MzA2NDI5MCwiZXhwIjoxNjczMDY3ODkwfQ.24pDdNWOxb-o3puF0OWfPYJHG_HAT-YjI4LPYMbmFxs
+
+###
+
+POST http://localhost:4000/video
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjhmNjBjZTYyZmE2YmI0NDU4MDI2MCIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NzMxOTQ1ODAsImV4cCI6MTY3MzE5ODE4MH0.hWus3FHyvVgoV6l-gUB7VwpYm8ChM-E7adxX67W3rHk
+
+{
+  "title": "my new video final",
+  "description": "my new final"
+}
+
+### USERS
+
+GET http://localhost:4000/user
+
+###
+
+POST http://localhost:4000/user/follow
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYmFlYmVlN2FkNzVhYTBiZDk2OTUyZSIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTY3MzE5NDUyNiwiZXhwIjoxNjczMTk4MTI2fQ.0zoHpw7cW-o2vq1VwC_lBGsTZu-8P9_FR332TP7IlP4
+
+{
+  "userId": "63b8f60ce62fa6bb44580260"
+}
+
+###
+
+DELETE http://localhost:4000/user/reject
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjhmNjBjZTYyZmE2YmI0NDU4MDI2MCIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NzMwNjYwNDIsImV4cCI6MTY3MzA2OTY0Mn0.fZZnDJ56EZciFCMwupuLNK93GHstnxezI66K9VSHi1g
+
+{
+  "userId": ""
+}
+
+### NOTIFICATIONS
+
+GET http://localhost:4000/notification
+
+###
+
+GET http://localhost:4000/notification/user
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjhmNjBjZTYyZmE2YmI0NDU4MDI2MCIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NzMwNjYwNDIsImV4cCI6MTY3MzA2OTY0Mn0.fZZnDJ56EZciFCMwupuLNK93GHstnxezI66K9VSHi1g
+
